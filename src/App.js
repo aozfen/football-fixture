@@ -85,13 +85,13 @@ const App = () => {
         <div>
           <div>
             {fixture.teams[0].players.map((d, i) => {
-              return (<div key={d.playerId}>Posizyon: {d.position}</div>)
+              return (<div key={d.playerId}><b>{d.playerNo}</b> {d.playerName} - {d.position}</div>)
             })}
           </div>
           <hr />
           <div>
             {fixture.teams[1].players.map((d, i) => {
-              return (<div key={d.playerId}>Posizyon: {d.position}</div>)
+               return (<div key={d.playerId}><b>{d.playerNo}</b> {d.playerName} - {d.position}</div>)
             })}
           </div>
         </div>
