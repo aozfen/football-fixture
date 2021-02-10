@@ -1,4 +1,4 @@
-import Player from './Player';
+import Players from './Players';
 
 const Fixture = ({ fixtureData }) => {
   return (
@@ -7,41 +7,9 @@ const Fixture = ({ fixtureData }) => {
       <div>{fixtureData.location}</div>
       <div>{fixtureData.date}</div>
       <div className="team-lists">
-        <table className="team">
-          <thead>
-            <tr>
-              <td>No</td>
-              <td>Player Name</td>
-              <td>Position</td>
-              <td>Goal</td>
-              <td>Y. Card</td>
-              <td>R. Card</td>
-            </tr>
-          </thead>
-          <tbody>
-            {fixtureData.teams[0].players.map((d, i) => {
-              return (<Player key={d.playerId} playerData={d} />)
-            })}
-          </tbody>
-        </table>
+        <Players playerData={fixtureData.teams[0]} />
         <hr />
-        <table className="team">
-        <thead>
-            <tr>
-              <td>No</td>
-              <td>Player Name</td>
-              <td>Position</td>
-              <td>Goal</td>
-              <td>Y. Card</td>
-              <td>R. Card</td>
-            </tr>
-          </thead>
-          <tbody>
-            {fixtureData.teams[1].players.map((d, i) => {
-              return (<Player key={d.playerId} playerData={d} />)
-            })}
-          </tbody>
-        </table>
+        <Players playerData={fixtureData.teams[1]} />
       </div>
     </>
   )
