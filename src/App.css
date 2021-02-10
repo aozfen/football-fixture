@@ -1,3 +1,35 @@
 .app{
   text-align: center;
+  max-width: 1364px;
+  margin: 0 auto;
+}
+.team-lists{
+  display: flex;
+}
+.team{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 15px;
+}
+.td-card{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card{
+  border-radius: 100%;
+  border: 1px solid #ccc;
+  width: 10px;
+  height: 10px;
+}
+.card.card-yellow{
+  background-color: yellow;
+}
+.card.card-red{
+  background-color: red;
+}
+
+thead tr td{
+  font-weight: bold;
 }

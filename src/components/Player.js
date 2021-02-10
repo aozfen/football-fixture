@@ -1,13 +1,13 @@
-const Player = ({playerData}) => {
+const Player = ({ playerData }) => {
   return (
-    <div key={playerData.playerId}>
-      <b>{playerData.playerNo}</b> 
-      {playerData.playerName} -  
-      <b>{playerData.position}</b> - 
-      GOAL: <b>{playerData.playerGoals}</b> -
-      Sarı Kart: <b>{playerData.playerYellowCards}</b> -
-      Kırmızı Kart:<b>{playerData.playerRedCards}</b> 
-      </div>
+    <tr key={playerData.playerId}>
+      <td><b>{playerData.playerNo}</b></td>
+      <td>{playerData.playerName}</td>
+      <td><b>{playerData.position}</b></td>
+      <td><b>{playerData.playerGoals}</b></td>
+      <td><div className="td-card"><div className="card card-yellow"></div> <b>{playerData.playerYellowCards}</b></div></td>
+      <td><div className="td-card"><div className="card card-red"></div><b>{playerData.playerRedCards}</b></div></td>
+    </tr>
   )
 }
 
